@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mainpage',
+    'django.contrib.sites',
+    'favicon',
+    'static',
 ]
 
 MIDDLEWARE = [
@@ -129,6 +132,14 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
+
+FAVICON_CONFIG = {
+    'shortcut icon': [16 ,32 ,48 ,128, 192],
+    'touch-icon': [192],
+    'icon': [192],
+    'apple-touch-icon': [57, 72, 114, 144, 180],
+    'apple-touch-icon-precomposed': [57, 72, 76, 114, 120, 144, 152,180],
+}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
