@@ -1,0 +1,5 @@
+p{
+  background-color: red
+}
+<h1>Попался!</h1>
+<p>Я знаю твой Ip: {{ip}}</p>

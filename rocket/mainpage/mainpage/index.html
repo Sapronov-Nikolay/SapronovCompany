@@ -1,0 +1,14 @@
+<link rel='stylesheet' href='stule.css'>
+<h1>Hi Nikolay</h1>
+<p>{{Задачи}}</p>
+<ol>
+    {% for задача in Задачи %}
+	{% if задача.done %}
+    <li><s>{{задача.description}}</s></li>
+	<li style='background-color:#3cff00'
+	{% else %}
+	<li><s>{{задача.description}}</s></li>
+	{% endif %}
+    {% endfor %}
+</ol>
+<h2>{{Категории}}</h2>
