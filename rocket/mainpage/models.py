@@ -8,7 +8,7 @@ from datetime import datetime
 # https://docs.djangoproject.com/en/4.2/topics/db/models/
 class Task(models.Model):
      # id создастся сам!
-     start = models.DateField(default=datetime.now)
-     end = models.DateField()
+     nachalo = models.DateField(default=datetime.now)
+     conets = models.DateField()
      description = models.CharField(max_length=256, default='')
      done = models.BooleanField(default=False)
