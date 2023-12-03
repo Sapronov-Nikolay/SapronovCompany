@@ -1,17 +1,25 @@
-from django.shortcuts import render
-from django.http import HttpResponse
 from .models import Task
+from django.shortcuts import render
+import rocket
+from mainpage import views
+
 # Create your views here.
 
+def get_menu(active):
+    result = []
+    for elem in rocket.urls.navset:
+        if elem['url'] == active:
+            elem['active'] = True
+        result.append(elem)
+    return result
+
 def index(request):
-    return HttpResponse('<h1>OPIAT DVOIKA</h1><h2>%s</h2>' % str((
-        request.method, request.META
-        )))
-    return HttpResponse('<pre>%s</pre>' % request.method)
-
-def page(*a, **b):
-    return HttpResponse('<h1>privet</h1>')
-
+    context = {
+        'navset': get_menu('/'),
+    }
+    return render(
+        'mainpage/index.html',
+        context)
 
 def index(request):
     result = ""
