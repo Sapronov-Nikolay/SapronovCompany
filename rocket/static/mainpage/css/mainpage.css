@@ -1,0 +1,70 @@
+body {
+    background: rgba(171, 242, 243, 0.78);
+}
+aside {
+    float: left;
+    background: rgba(64, 138, 3, 0.51);
+    width: 20%;
+    padding: 2.5%;
+    color: #ffffff;
+    height: 100vh;
+    border-right: 5px solid #56c4c7;
+}
+
+aside img {
+    width: 80px;
+    float: left;
+}
+
+aside .logo {
+    font-size: 48px;
+    font-family: 'Consolas', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    margin-left: 10px;
+    font-weight: bold;
+    position: relative;
+    top: -5px;
+    color: rgba(213, 232, 40, 0.88);
+}
+
+aside h3 {
+    margin-top: 50px;
+    font-size: 28px;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside ul li {
+    color: white;
+    display: block;
+    margin-top: 20px;
+    transition: all .5s ease;
+}
+
+aside li:hover, aside ul a:hover {
+    color: #e10a85;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+a {
+    text-decoration: none;
+}
+
+main div {
+    color: brown;
+    font-size: 40px;
+    text-align: center;
+}
+
+p {
+    font-size: 60%;
+    top: 7px;
+    color: darkslategray;
+    width: 73.5%;
+    margin-left: 26%;
+    border: solid 2px;
+    margin-right: 40%;
+    padding-right: 5px;
+}
