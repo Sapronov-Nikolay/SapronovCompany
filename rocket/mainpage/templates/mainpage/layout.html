@@ -16,13 +16,16 @@
     <h3>Навигация</h3>
     <ul>
         <a href="{% url 'home' %}">
-            <li class="left" id="img_1"><img src="static/mainpage/img/school_icon_230390.ico">Главная</li>
+            <li class="left" id="img_1"><img src="{% static 'mainpage/img/school_icon_230390.ico' %}">Главная</li>
         </a>
         <a href="{% url 'about' %}">
-            <li class="left" id="img_2"><img src="static/mainpage/img/school_icon_230390.ico">Про нас</li>
+            <li class="left" id="img_2"><img src="{% static 'mainpage/img/school_icon_230390.ico' %}">Про нас</li>
         </a>
         <a href="{% url 'contact' %}">
-            <li class="left" id="img_3"><img src="static/mainpage/img/school_icon_230390.ico">Контакты</li>
+            <li class="left" id="img_3"><img src="{% static 'mainpage/img/school_icon_230390.ico' %}">Контакты</li>
+        </a>
+        <a href="{% url 'task_home' %}">
+            <li class="left" id="img_3"><img src="{% static 'mainpage/img/school_icon_230390.ico' %}">Записи</li>
         </a>
     </ul>
 </aside>

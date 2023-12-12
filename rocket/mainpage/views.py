@@ -1,4 +1,4 @@
-from .models import Task
+
 from django.shortcuts import render
 import rocket
 from mainpage import views
@@ -6,23 +6,25 @@ from mainpage import views
 
 
 def index(request):
-    return render(request, 'mainpage/index.html')
+    header = "Личная информация"  # Обычная переменная
+    langs = ["Python", "html", "css", "javascript"]  # Массив ["x", "x", №, №]
+    user = {"name": "Николай, ", "age": 38}  # Словарь {"x": "x", "x": №}
+    addr = ("Городецкая", 8, 1, 137)  # Кортеж ("x", "x", №)
+    data = {"header": header, "langs": langs, "user": user, "address": addr}
+    return render(request, 'mainpage/index.html', context=data)
 
 def about(request):
-    return render(request, 'mainpage/about.html')
+    header = "Личная информация"  # Обычная переменная
+    langs = ["Python", "html", "css", "javascript"]  # Массив ["x", "x", №, №]
+    user = {"name": "Николай, ", "age": 38}  # Словарь {"x": "x", "x": №}
+    addr = ("Городецкая", 8, 1, 137)  # Кортеж ("x", "x", №)
+    data = {"header": header, "langs": langs, "user": user, "address": addr}
+    return render(request, 'mainpage/about.html', context=data)
 
 def contact(request):
-    return render(request, 'mainpage/contact.html')
-
-
-def index(request):
-    result = ""
-    for t in Task.objects.all():
-        result += t.description
-    kateg = ""    
-    return render(
-        request,
-        "mainpage/index.html",
-        {"Задачи": Task.objects.all(), "Категории": kateg} # Kонтекст передаваемых переменных
-
-    )
+    header = "Личная информация"  # Обычная переменная
+    langs = ["Python", "html", "css", "javascript"]  # Массив ["x", "x", №, №]
+    user = {"name": "Николай, ", "age": 38}  # Словарь {"x": "x", "x": №}
+    addr = ("Городецкая", 8, 1, 137)  # Кортеж ("x", "x", №)
+    data = {"header": header, "langs": langs, "user": user, "address": addr}
+    return render(request, 'mainpage/contact.html', context=data)

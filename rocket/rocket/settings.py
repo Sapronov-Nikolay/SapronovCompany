@@ -36,23 +36,24 @@ ALLOWED_HOSTS = [
 
 INSTALLED_APPS = [
     'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
+    'django.contrib.auth',  # Фреймворк аутентификации и моделей по умолчанию.
+    'django.contrib.contenttypes',  # Django контент-типовая система (даёт разрешения, связанные с моделями).
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'mainpage',
-    'django.contrib.sites',
-    'favicon',
+    #'django.contrib.sites',
     'static',
+    'tasklist',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',  # Управление сессиями между запросами
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',  # Связывает пользователей, использующих сессии, запросами.
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -62,7 +63,7 @@ ROOT_URLCONF = 'rocket.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -86,6 +87,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'OPTIONS': {
             'service': 'todo_service',
+            #'passfile': '.pgpass',
         }
         # Старая запись сохранена на всякий случай 'NAME': BASE_DIR / 'db.sqlite3',
     }
@@ -116,9 +118,13 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'ru' # оставим запись на всякий случай 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
+
+#FIRST_DAY_OF_WEEK = 1
 
 USE_I18N = True
+
+USE_L10N = True
 
 USE_TZ = True
 
@@ -133,15 +139,17 @@ STATICFILES_DIRS = [
 ]
 
 
-FAVICON_CONFIG = {
+'''FAVICON_CONFIG = {
     'shortcut icon': [16 ,32 ,48 ,128, 192],
     'touch-icon': [192],
     'icon': [192],
     'apple-touch-icon': [57, 72, 114, 144, 180],
     'apple-touch-icon-precomposed': [57, 72, 76, 114, 120, 144, 152,180],
-}
+}'''
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#SITE_ID = 1

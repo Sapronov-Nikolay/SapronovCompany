@@ -8,8 +8,6 @@ psycopg = "*"
 psycopg2 = "*"
 django = "*"
 pandas = "*"
-django-favicon-plus = "*"
-django-favicon-plus-reloaded = "*"
 
 [dev-packages]
 
