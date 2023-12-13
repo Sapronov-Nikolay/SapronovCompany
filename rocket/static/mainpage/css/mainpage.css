@@ -83,3 +83,17 @@ p {
     margin-right: 38%;
     padding-right: 5px;
 }
+.alert-warning {
+    float: left;
+    clear: none;
+    width: 500px;
+    margin: 10px 50%;
+    text-align: center;
+    background: #a4fa20;
+    border: solid 1px;
+    position: relative;
+}
+.alert-warning p {;
+    border: solid 1px;
+    margin-left: 16%;
+}
