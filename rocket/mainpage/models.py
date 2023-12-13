@@ -13,7 +13,7 @@ class Task(models.Model):
     done = models.BooleanField('Статус', default=False)
 
     def __str__(self):
-        return str(self.description)
+        return str(self.nachalo)
 
     class Meta:
         verbose_name = 'Задача'
