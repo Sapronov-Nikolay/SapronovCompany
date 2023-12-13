@@ -13,6 +13,17 @@
         <p>Адрес: ул. {{ address.0 }}, д. {{ address.1 }}, корп. {{ address.2 }} кв. {{ address.2 }}</p>
         <p>Владеет языками: {{ langs.0 }}, {{ langs.1 }}, {{ langs.2 }}, {{ langs.3 }}</p>
         <h1>Давайте добавим форму для записи</h1>
-        <b>-------------</b>
+        <br>-------------</br>
+        {% if tasklist %}
+            {% for el in tasklist %}
+                <div class="alert alert-warning">
+                    <h5>{{ el.nachalo }}</h5>
+                    <h5>{{ el.conets }}</h5>
+                    <p>{{ el.description }}</p>
+                </div>
+        {% endfor %}
+        {% else %}
+            <p>Запись пуста!</p>
+        {% endif %}
     </div>
 {% endblock %}
